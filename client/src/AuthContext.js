@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
     }, [])
 
     const checkAuth = async () => {
-        Axios.get('api/auth/user_data')
+        Axios.get('http://localhost:8080/api/auth/user_data')
             .then(response => {
                 if (response.data.email) {
                     setIsAuth(true)
@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
     }
 
     const logout = async () => {
-        Axios.get("/api/auth/logout")
+        Axios.get("http://localhost:8080/api/auth/logout")
           .then(() => {
             setIsAuth(false);
             return <Redirect to='/' />

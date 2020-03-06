@@ -13,7 +13,7 @@ function Home(props) {
   // this function is duplicated in the Members page component
   // consider refactor 
   const getSecret = async () => {
-    const secretResponse = await Axios.get("/api/secrets");
+    const secretResponse = await Axios.get("http://localhost:8080/api/secrets");
     console.log(secretResponse.data);
     setSecret(secretResponse.data);
   };

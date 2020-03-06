@@ -29,7 +29,7 @@ const LoginForm = props => {
     }
 
     const login = loginCreds => {
-        Axios.post('/api/auth/login', loginCreds)
+        Axios.post('http://localhost:8080/api/auth/login', loginCreds)
             .then(user => {
                 console.log("login response ", user)
                 setIsAuth(true)

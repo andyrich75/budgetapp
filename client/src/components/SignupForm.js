@@ -78,7 +78,7 @@ const Signup = props => {
     }
 
     const postNewUser = newUser => {
-        Axios.post('/api/auth/signup', newUser)
+        Axios.post('http://localhost:8080/api/auth/signup', newUser)
             .then(() => {
                 props.history.push('/login')
             })
